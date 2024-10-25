@@ -1,7 +1,6 @@
 import { NextResponse, NextRequest } from "next/server";
 import Trabalho from "@/types/trabalho";
-
-const trabalhos: Trabalho[] = [];
+import trabalhos from "@/data/trabalhos";
 
 export async function POST(request: NextRequest) {
     try {

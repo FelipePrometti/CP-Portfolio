@@ -6,7 +6,7 @@ export default function Header() {
             <nav className="container mx-auto flex justify-between items-center px-6">
                 <div className="text-3xl font-extrabold text-cor-6">
                     <Link href="/" className="hover:opacity-90 transition-opacity duration-300">
-                        CP de <span className="text-cor-4">Front-End</span>
+                        CP de Front-End
                     </Link>
                 </div>
 
@@ -27,7 +27,7 @@ export default function Header() {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/challengersprints" className="text-cor-6 text-lg hover:text-cor-3 transition-colors duration-300">
+                        <Link href="/challengersprint" className="text-cor-6 text-lg hover:text-cor-3 transition-colors duration-300">
                             Challenger Sprints
                         </Link>
                     </li>
