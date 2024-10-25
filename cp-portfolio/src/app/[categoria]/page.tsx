@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Trabalho from "@/types/trabalho";
 
-export default function CategoriaPage({ params }: { params: Promise<{ categoria: string }> }) {
+export default function Categoria({ params }: { params: Promise<{ categoria: string }> }) {
     const [trabalhos, setTrabalhos] = useState<Trabalho[]>([]);
     const [categoria, setCategoria] = useState<string | null>(null);
 
