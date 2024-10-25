@@ -23,6 +23,26 @@ export async function POST(request: NextRequest) {
     }
 }
 
-export async function GET() {
-    return NextResponse.json(trabalhos);
+export async function GET(request: NextRequest) {
+    const { searchParams } = new URL(request.url);
+    const categoria = searchParams.get("categoria");
+    const id = searchParams.get("id");
+
+    if (categoria && id) {
+
+        const trabalho = trabalhos.find(
+            (t) => t.categoria === categoria && t.id === Number(id)
+        );
+        return trabalho ? NextResponse.json(trabalho)
+                        : NextResponse.json({ error: "Trabalho não encontrado" }, { status: 404 });
+    } else if (categoria) {
+
+        const trabalhosDaCategoria = trabalhos.filter(
+            (t) => t.categoria === categoria
+        );
+        return NextResponse.json(trabalhosDaCategoria);
+
+    } else {
+        return NextResponse.json(trabalhos);
+    }
 }
