@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { CiCirclePlus } from "react-icons/ci";
 
 export default function Header() {
     return (
@@ -29,6 +30,11 @@ export default function Header() {
                     <li>
                         <Link href="/challengersprint" className="text-cor-6 text-lg hover:text-cor-3 transition-colors duration-300">
                             Challenger Sprints
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/adicionar" className="text-cor-6 text-lg hover:text-cor-3 transition-colors duration-300 h-full">
+                            <CiCirclePlus />
                         </Link>
                     </li>
                 </ul>
