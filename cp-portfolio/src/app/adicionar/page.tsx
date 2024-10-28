@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 
 export default function AdicionarTrabalho() {
   const [titulo, setTitulo] = useState("");
-  const [data, setData] = useState("");
+  const [semestre, setSemestre] = useState("");
   const [nota, setNota] = useState("");
   const [categoria, setCategoria] = useState("");
 
@@ -16,7 +16,7 @@ export default function AdicionarTrabalho() {
 
     const novoTrabalho = {
         titulo,
-        data,
+        semestre,
         nota,
         categoria,
     };
@@ -53,9 +53,9 @@ export default function AdicionarTrabalho() {
         />
         <input
           type="date"
-          placeholder="Data"
-          value={data}
-          onChange={(e) => setData(e.target.value)}
+          placeholder="semestre"
+          value={semestre}
+          onChange={(e) => setSemestre(e.target.value)}
           required
         />
         <input

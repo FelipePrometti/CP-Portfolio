@@ -49,7 +49,7 @@ export default function Categoria({ params }: { params: Promise<{ categoria: str
                         <li key={trabalho.id} className="p-4 bg-cor-1 rounded shadow">
                             <h2 className="text-xl font-semibold">{trabalho.titulo}</h2>
                             <p>Autor: {trabalho.autor}</p>
-                            <p>Data: {trabalho.data}</p>
+                            <p>Semestre: {trabalho.semestre}</p>
                             <p>Nota: {trabalho.nota}</p>
                             <Link href={`/${categoria}/${trabalho.id}`} className="text-blue-500 hover:underline">
                                 Ver detalhes

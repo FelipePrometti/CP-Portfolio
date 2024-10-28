@@ -45,7 +45,7 @@ export default function TrabalhoDetalhes({ params }: { params: Promise<{ categor
         <main className="container mx-auto py-8 px-6">
             <h1 className="text-3xl font-bold mb-6">{trabalho.titulo}</h1>
             <p>Autor: {trabalho.autor}</p>
-            <p>Data: {trabalho.data}</p>
+            <p>Semestre: {trabalho.semestre}</p>
             <p>Nota: {trabalho.nota}</p>
             <p>Categoria: {trabalho.categoria}</p>
         </main>
