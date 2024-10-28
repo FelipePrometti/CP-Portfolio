@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function AdicionarTrabalho() {
+  const [autor, setAutor] = useState("");
   const [titulo, setTitulo] = useState("");
   const [semestre, setSemestre] = useState("");
   const [nota, setNota] = useState("");
@@ -15,6 +16,7 @@ export default function AdicionarTrabalho() {
     e.preventDefault();
 
     const novoTrabalho = {
+        autor,
         titulo,
         semestre,
         nota,
@@ -44,6 +46,13 @@ export default function AdicionarTrabalho() {
     <main>
       <h1>Adicionar Trabalho</h1>
       <form onSubmit={handleSubmit}>
+      <input
+          type="text"
+          placeholder="Autor"
+          value={autor}
+          onChange={(e) => setAutor(e.target.value)}
+          required
+        />
         <input
           type="text"
           placeholder="Título"
@@ -51,13 +60,13 @@ export default function AdicionarTrabalho() {
           onChange={(e) => setTitulo(e.target.value)}
           required
         />
-        <input
-          type="date"
-          placeholder="semestre"
+        <select
           value={semestre}
           onChange={(e) => setSemestre(e.target.value)}
-          required
-        />
+        >
+          <option value="1">1°</option>
+          <option value="2">2°</option>
+        </select>
         <input
           type="number"
           placeholder="Nota"
