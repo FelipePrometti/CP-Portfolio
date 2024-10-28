@@ -16,11 +16,11 @@ export default function AdicionarTrabalho() {
     e.preventDefault();
 
     const novoTrabalho = {
-        autor,
-        titulo,
-        semestre,
-        nota,
-        categoria,
+      autor,
+      titulo,
+      semestre,
+      nota,
+      categoria,
     };
 
     try {
@@ -43,10 +43,10 @@ export default function AdicionarTrabalho() {
   };
 
   return (
-    <main>
-      <h1>Adicionar Trabalho</h1>
-      <form onSubmit={handleSubmit}>
-      <input
+    <main className="bg-gradient-to-r from-cor-1 to-cor-2 shadow-lg py-4 m-10 p-3">
+      <h1 className="text-center font-bold text-white mb-5">Adicionar Trabalho</h1>
+      <form onSubmit={handleSubmit} className="flex justify-evenly">
+        <input
           type="text"
           placeholder="Autor"
           value={autor}
@@ -82,7 +82,7 @@ export default function AdicionarTrabalho() {
           <option value="globalsolution">Global Solution</option>
           <option value="challengersprint">Challenger Sprint</option>
         </select>
-        <button type="submit">
+        <button type="submit" className="bg-white w-36 h-10 rounded-lg">
           Adicionar Trabalho
         </button>
       </form>
