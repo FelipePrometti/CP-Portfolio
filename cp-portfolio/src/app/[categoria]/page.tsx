@@ -1,22 +1,22 @@
 "use client";
-
+ 
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Trabalho from "@/types/trabalho";
-
+ 
 export default function Categoria({ params }: { params: Promise<{ categoria: string }> }) {
     const [trabalhos, setTrabalhos] = useState<Trabalho[]>([]);
     const [categoria, setCategoria] = useState<string | null>(null);
-
+ 
     useEffect(() => {
         const fetchCategoria = async () => {
             const parametros = await params;
             setCategoria(parametros.categoria);
         };
-
+ 
         fetchCategoria();
     }, [params]);
-
+ 
     useEffect(() => {
         if (categoria) {
             const fetchTrabalhos = async () => {
@@ -31,15 +31,15 @@ export default function Categoria({ params }: { params: Promise<{ categoria: str
                     console.error("Erro ao buscar trabalhos:", error);
                 }
             };
-
+ 
             fetchTrabalhos();
         }
     }, [categoria]);
-
+ 
     if (!categoria) {
         return <div>Carregando...</div>;
     }
-
+ 
     return (
         <main className="container mx-auto py-8 px-6">
             <h1 className="text-3xl font-bold mb-6">Trabalhos de {categoria}</h1>
@@ -48,6 +48,7 @@ export default function Categoria({ params }: { params: Promise<{ categoria: str
                     trabalhos.map((trabalho) => (
                         <li key={trabalho.id} className="p-4 bg-cor-1 rounded shadow">
                             <h2 className="text-xl font-semibold">{trabalho.titulo}</h2>
+                            <p>Autor: {trabalho.autor}</p>
                             <p>Data: {trabalho.data}</p>
                             <p>Nota: {trabalho.nota}</p>
                             <Link href={`/${categoria}/${trabalho.id}`} className="text-blue-500 hover:underline">
@@ -62,3 +63,4 @@ export default function Categoria({ params }: { params: Promise<{ categoria: str
         </main>
     );
 }
+ 
