@@ -123,7 +123,7 @@ const trabalhos: Trabalho[] = [
     },
     {
         id: 16,
-        autor: "Murilo",
+        autor: "Murillo",
         titulo: "FRONT-END DESIGN ENGINEERING - CP1",
         semestre: "1°",
         nota: "8.5",
@@ -131,7 +131,7 @@ const trabalhos: Trabalho[] = [
     },
     {
         id: 17,
-        autor: "Murilo",
+        autor: "Murillo",
         titulo: "FRONT-END DESIGN ENGINEERING - CP2",
         semestre: "1°",
         nota: "10",
@@ -139,7 +139,7 @@ const trabalhos: Trabalho[] = [
     },
     {
         id: 18,
-        autor: "Murilo",
+        autor: "Murillo",
         titulo: "FRONT-END DESIGN ENGINEERING - Sprint 1",
         semestre: "1°",
         nota: "5",
@@ -147,7 +147,7 @@ const trabalhos: Trabalho[] = [
     },
     {
         id: 19,
-        autor: "Murilo",
+        autor: "Murillo",
         titulo: "FRONT-END DESIGN ENGINEERING - Sprint 2",
         semestre: "1°",
         nota: "9",
@@ -155,7 +155,7 @@ const trabalhos: Trabalho[] = [
     },
     {
         id: 20,
-        autor: "Murilo",
+        autor: "Murillo",
         titulo: "FRONT-END DESIGN ENGINEERING - Sprint 3",
         semestre: "2°",
         nota: "6.5",
@@ -163,7 +163,7 @@ const trabalhos: Trabalho[] = [
     },
     {
         id: 21,
-        autor: "Murilo",
+        autor: "Murillo",
         titulo: "FRONT-END DESIGN ENGINEERING - CP4",
         semestre: "2°",
         nota: "4",
@@ -171,7 +171,7 @@ const trabalhos: Trabalho[] = [
     },
     {
         id: 22,
-        autor: "Murilo",
+        autor: "Murillo",
         titulo: "FRONT-END DESIGN ENGINEERING - CP5",
         semestre: "2°",
         nota: "7",
